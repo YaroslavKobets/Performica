@@ -1,0 +1,44 @@
+// max-width: 374px
+@mixin screen-xs {
+	@media (max-width: #{$screen-xs}) {
+		@content;
+	}
+}
+
+// max-width: 640px
+@mixin screen-sm {
+	@media (max-width: #{$screen-sm}) {
+		@content;
+	}
+}
+
+// max-width: 767px
+@mixin screen-md {
+	@media (max-width: #{$screen-md}) {
+		@content;
+	}
+}
+
+// max-width: 1080px
+@mixin screen-xhl {
+	@media (max-width: #{$screen-xhl}) {
+		@content;
+	}
+}
+
+// max-width: 1600px
+@mixin screen-xxl {
+	@media (max-width: #{$screen-xxl}) {
+		@content;
+	}
+}
+
+$maxWidthContainer: 1920;
+@mixin adaptiveValue($property, $startSize, $minSize) {
+	$addSize: $startSize - $minSize;
+	//Только если меньше контейнера
+	#{$property}: $startSize + px;
+	@media (max-width: #{$maxWidthContainer + px}) {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+	}
+}

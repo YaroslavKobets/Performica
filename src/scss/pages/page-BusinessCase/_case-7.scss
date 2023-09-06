@@ -1,0 +1,31 @@
+.case-7 {
+	&__body {
+		display: grid;
+		grid-template-columns: 1.04fr 1fr;
+		@include screen-xhl {
+			grid-template-columns: auto;
+			justify-content: center;
+		}
+	}
+
+	&__text {
+		@include adaptiveValue("font-size", 36, 18);
+		line-height: 1.3;
+		p {
+			@include adaptiveValue("margin-bottom", 65, 30);
+			strong {
+				line-height: 1.4;
+				font-weight: 500;
+				@include adaptiveValue("font-size", 44, 22);
+				span {
+					color: $color-blue;
+				}
+			}
+		}
+	}
+
+	&__img {
+		@include adaptiveValue("max-width", 775, 275);
+		margin: 0 auto;
+	}
+}

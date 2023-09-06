@@ -1,0 +1,100 @@
+.case-16 {
+	background: $color-blue;
+	overflow: hidden;
+	&__container {
+		position: relative;
+		&::before {
+			content: "";
+			width: calc(50% - 15px);
+			height: calc(100% - 30px);
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			z-index: 1;
+			background-color: $color-white;
+			border-radius: 16px;
+			@include screen-xhl {
+				display: none;
+			}
+		}
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		position: relative;
+		z-index: 2;
+		@include screen-xhl {
+			grid-template-columns: auto;
+		}
+	}
+
+	&__white {
+		color: $color-white;
+		@include adaptiveValue("padding-right", 75, 0);
+
+		p {
+			@include adaptiveValue("font-size", 50, 22);
+			line-height: 1.5;
+		}
+		span {
+			display: block;
+			font-weight: 500;
+			line-height: 0.9;
+			margin-top: 30px;
+			@include adaptiveValue("margin-bottom", 75, 30);
+			@include adaptiveValue("font-size", 200, 40);
+		}
+		@include screen-xhl {
+			padding: 0;
+			padding-bottom: 60px;
+			span {
+				font-size: 76px !important;
+			}
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		line-height: 0.9;
+		@include adaptiveValue("margin-bottom", 100, 20);
+		@include adaptiveValue("font-size", 100, 44);
+		@include screen-sm {
+			line-height: 1.5;
+		}
+	}
+
+	&__blue {
+		@include adaptiveValue("padding-left", 75, 0);
+		position: relative;
+		&::before {
+			content: "";
+			width: 300%;
+			height: 200%;
+			position: absolute;
+			top: 0;
+			left: -100%;
+			z-index: -1;
+			background-color: $color-white;
+			border-radius: 16px;
+			display: none;
+		}
+
+		ul {
+			@include adaptiveValue("padding-left", 70, 30);
+
+			li {
+				list-style: disc;
+				@include adaptiveValue("font-size", 50, 22);
+				line-height: 1.9;
+			}
+		}
+		@include screen-xhl {
+			padding: 0;
+			padding-top: 60px;
+			&::before {
+				display: block;
+			}
+		}
+	}
+}

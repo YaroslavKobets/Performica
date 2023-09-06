@@ -1,0 +1,54 @@
+.learn-why {
+	margin-bottom: 220px;
+	@include screen-xxl {
+		margin-bottom: 160px;
+	}
+	@include screen-xhl {
+		margin-bottom: 100px;
+	}
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr 0.98fr;
+		align-items: end;
+		gap: 20px;
+		@include screen-xxl {
+			align-items: center;
+		}
+		@include screen-xhl {
+			grid-template-columns: 1.5fr 1fr;
+			gap: 10px;
+		}
+		@include screen-sm {
+			grid-template-columns: auto;
+			gap: 30px;
+		}
+	}
+
+	&__image {
+		@include screen-sm {
+			margin: 0 -16px;
+		}
+	}
+
+	&__content {
+		@include screen-sm {
+			padding: 0 30px;
+		}
+		@include screen-xs {
+			padding: 0 24px;
+		}
+		.section-title {
+		}
+		.button {
+			margin: 120px 0 0 0;
+			@include screen-xxl {
+				margin: 0;
+				margin-top: 30px;
+			}
+			@include screen-sm {
+				display: flex;
+				margin: 30px auto 0;
+			}
+		}
+	}
+}

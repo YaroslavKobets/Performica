@@ -1,0 +1,81 @@
+.case-2 {
+	color: $color-white;
+	position: relative;
+	&::before {
+		content: "";
+		width: calc(100% - 20px);
+		height: calc(100% - 20px);
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		background-color: $color-blue;
+		z-index: -1;
+		border-radius: 20px;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__text {
+		@include adaptiveValue("font-size", 57, 16);
+		line-height: 1.5;
+		@include adaptiveValue("margin-bottom", 140, 40);
+	}
+
+	&__calc {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background: $color-white;
+		border-radius: 20px;
+		color: $color-blue;
+		@include adaptiveValue("padding-top", 18, 10);
+		@include adaptiveValue("padding-bottom", 18, 10);
+		@include adaptiveValue("padding-right", 30, 15);
+		@include adaptiveValue("padding-left", 30, 15);
+		span {
+			font-weight: 300;
+			@include adaptiveValue("font-size", 70, 22);
+		}
+		@include screen-xhl {
+			display: grid;
+			grid-template-columns: 1fr 0.33fr 1fr 0.33fr;
+			text-align: center;
+			@include adaptiveValue("row-gap", 40, 20);
+		}
+		@include screen-sm {
+			grid-template-columns: 1fr 0.18fr 1fr 0.18fr;
+		}
+	}
+
+	&__calc-block {
+		line-height: 0.9;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 80, 28);
+	}
+
+	&__calc-divide {
+		line-height: 1.2;
+		font-weight: 700;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include adaptiveValue("row-gap", 20, 10);
+		@include adaptiveValue("font-size", 50, 16);
+		text-align: center;
+		position: relative;
+
+		&::before {
+			content: "";
+			width: 100%;
+			height: 2px;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: $color-blue;
+		}
+	}
+}

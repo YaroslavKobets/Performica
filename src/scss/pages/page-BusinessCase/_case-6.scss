@@ -1,0 +1,32 @@
+.case-6 {
+	&__body {
+		position: relative;
+		@include adaptiveValue("padding-bottom", 645, 186);
+	}
+
+	&__text {
+		@include adaptiveValue("font-size", 44, 22);
+		line-height: 1.5;
+		max-width: 890px;
+		@include screen-xhl {
+			max-width: 640px;
+		}
+		span {
+			font-weight: 500;
+			color: $color-red;
+		}
+	}
+
+	&__figure {
+		@include adaptiveValue("max-width", 454, 144);
+		position: absolute;
+		@include adaptiveValue("bottom", 164, 10);
+		@include adaptiveValue("left", 521, 72);
+	}
+
+	&__bg {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}

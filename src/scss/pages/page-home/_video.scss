@@ -1,0 +1,76 @@
+.video {
+	margin-bottom: 180px;
+	@include screen-xhl {
+		margin-bottom: 140px;
+	}
+	@include screen-sm {
+		margin-bottom: 80px;
+	}
+	&__container {
+		position: relative;
+		&::before {
+			content: "";
+			width: calc(620 / 1580 * 100%);
+			height: calc(940 / 880 * 100%);
+			background: linear-gradient(142.76deg, #4df4ff 14.98%, #4086ee 85.22%);
+			opacity: 0.3;
+			filter: blur(200px);
+			position: absolute;
+			z-index: -1;
+			top: calc(-380 / 880 * 100%);
+			right: calc(-450 / 1580 * 100%);
+			border-radius: 50%;
+			@include screen-xhl {
+				filter: blur(100px);
+			}
+			@include screen-sm {
+				width: 250px;
+				height: 385px;
+				right: -100px;
+				top: -335px;
+			}
+		}
+	}
+
+	&__body {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 56.25%;
+		background: #f3f1ff;
+		border-radius: 40px;
+		overflow: hidden;
+		@include screen-xhl {
+			border-radius: 15px;
+		}
+		&--enabled {
+		}
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			border: none;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__link {
+	}
+
+	&__media {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+
+	&__btn {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+	}
+}

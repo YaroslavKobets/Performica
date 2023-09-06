@@ -1,0 +1,234 @@
+.reviews {
+	margin-bottom: 150px;
+	@include screen-xxl {
+		margin-bottom: 100px;
+	}
+	@include screen-xhl {
+		margin-bottom: 55px;
+	}
+	@include screen-sm {
+		margin-bottom: 40px;
+	}
+	.section-title {
+		margin-bottom: 70px;
+		@include screen-xxl {
+			margin-bottom: 50px;
+		}
+		@include screen-md {
+			margin-bottom: 30px;
+		}
+	}
+	&__container {
+		position: relative;
+		&::before {
+			content: "";
+			width: 620px;
+			height: 915px;
+			position: absolute;
+			top: 330px;
+			left: -450px;
+			background: linear-gradient(142.76deg, #4df4ff 14.98%, #4086ee 85.22%);
+			opacity: 0.3;
+			filter: blur(200px);
+			z-index: -1;
+			@include screen-xxl {
+				top: 0;
+			}
+			@include screen-xhl {
+				top: -180px;
+				width: 340px;
+				height: 520px;
+				left: -190px;
+				filter: blur(100px);
+			}
+			@include screen-sm {
+				height: 284px;
+				width: 229px;
+				left: -87px;
+				top: -110px;
+			}
+		}
+	}
+	&__box {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		@include screen-md {
+			grid-template-columns: auto;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: 35px 45px 60px 45px;
+		position: relative;
+		@include screen-xxl {
+			padding: 20px 20px 30px;
+		}
+		@include screen-xhl {
+			padding: 20px 15px 30px;
+		}
+		@include screen-md {
+			padding: 30px 30px 35px;
+		}
+		@include screen-xs {
+			padding: 30px 20px 40px;
+		}
+		&::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			background: rgba(255, 255, 255, 0.5);
+			box-shadow: 0px 15px 40px rgba(13, 0, 92, 0.1);
+			backdrop-filter: blur(25px);
+			border-radius: 15px;
+		}
+		@include screen-xhl {
+			&:nth-child(1) {
+				.reviews__min-logo {
+					img {
+						height: 40px;
+					}
+				}
+			}
+			&:nth-child(2) {
+				.reviews__min-logo {
+					img {
+						height: 53px;
+					}
+				}
+			}
+			&:nth-child(3) {
+				.reviews__min-logo {
+					img {
+						height: 29px;
+					}
+				}
+			}
+		}
+		@include screen-md {
+			&:nth-child(1) {
+				.reviews__min-logo {
+					img {
+						height: 49px;
+					}
+				}
+			}
+			&:nth-child(2) {
+				.reviews__min-logo {
+					img {
+						height: 72px;
+					}
+				}
+			}
+			&:nth-child(3) {
+				.reviews__min-logo {
+					img {
+						height: 39px;
+					}
+				}
+			}
+		}
+	}
+
+	&__min-logo {
+		display: flex;
+		align-items: center;
+		height: 110px;
+		@include screen-xhl {
+			height: 53px !important;
+			img {
+				width: auto !important;
+			}
+		}
+		@include screen-md {
+			height: auto;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+
+	&__box-text {
+		font-size: 25px;
+		margin: 35px 0;
+		line-height: 1.3;
+		@include screen-xxl {
+			font-size: 18px;
+		}
+		@include screen-xhl {
+			font-size: 14px;
+			margin: 15px 0 20px;
+		}
+		@include screen-md {
+			margin: 15px 0 30px;
+			font-size: 16px;
+			line-height: 1.2;
+		}
+	}
+
+	&__client {
+		display: grid;
+		grid-template-columns: 90px 1fr;
+		margin-top: auto;
+		color: $color-main;
+		column-gap: 30px;
+		@include screen-xxl {
+			column-gap: 10px;
+			grid-template-columns: 65px 1fr;
+		}
+		@include screen-xhl {
+			grid-template-columns: 40px 1fr;
+		}
+		@include screen-md {
+			grid-template-columns: 52px 1fr;
+			column-gap: 15px;
+		}
+	}
+
+	&__client-avatar {
+		grid-row: 2 span;
+	}
+
+	&__client-box-name {
+		font-weight: 500;
+		font-size: 33px;
+		line-height: 1.3;
+		align-self: flex-end;
+		@include screen-xxl {
+			font-size: 22px;
+		}
+		@include screen-xhl {
+			font-size: 16px;
+		}
+		@include screen-md {
+			font-size: 22px;
+		}
+		@include screen-xs {
+			font-size: 20px;
+		}
+	}
+
+	&__client-box-position {
+		font-size: 25px;
+		line-height: 1.2;
+		align-self: flex-start;
+		@include screen-xxl {
+			font-size: 16px;
+		}
+		@include screen-xhl {
+			font-size: 12px;
+		}
+		@include screen-md {
+			font-size: 14px;
+		}
+	}
+}

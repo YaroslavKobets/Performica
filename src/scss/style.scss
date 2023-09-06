@@ -1,0 +1,22 @@
+@use "sass:math";
+
+//<SETTINGS>========================================
+@import "base/helpers";
+@import "base/mixins";
+@import "fonts/fonts";
+@import "base/null";
+@import "base/basic";
+//<SETTINGS>========================================
+
+//<HEDER + FOOTER STYLE>========================================
+@import "template-parts/header";
+@import "template-parts/footer";
+@import "template-parts/popup";
+//</HEDER + FOOTER STYLE>========================================
+
+//<PAGES STYLE>========================================
+@import "pages/page-home/home";
+@import "pages/page-BusinessCase/all-case";
+@import "pages/page-blog/blog";
+@import "pages/page-careers/careers";
+@import "pages/page-support/support";

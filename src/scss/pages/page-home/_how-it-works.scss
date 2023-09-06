@@ -1,0 +1,218 @@
+//<HOW IT WORKS>========================================
+.how-it-works {
+	margin-bottom: 250px;
+	@include screen-xxl {
+		margin-bottom: 190px;
+	}
+	@include screen-xhl {
+		margin-bottom: 140px;
+	}
+	@include screen-md {
+		margin-bottom: 90px;
+	}
+	@include screen-sm {
+		margin-bottom: 55px;
+	}
+	@include screen-xs {
+		margin-bottom: 70px;
+	}
+	&__container {
+		position: relative;
+		&::before {
+			content: "";
+			width: 620px;
+			height: 1350px;
+			background: linear-gradient(142.76deg, #4df4ff 14.98%, #4086ee 85.22%);
+			opacity: 0.3;
+			filter: blur(200px);
+			position: absolute;
+			z-index: -1;
+			top: -96px;
+			left: -450px;
+			border-radius: 50%;
+			@include screen-xxl {
+				width: 340px;
+				height: 520px;
+				top: 70px;
+				left: -250px;
+				filter: blur(100px);
+			}
+			@include screen-sm {
+				width: 225px;
+				height: 345px;
+				top: 140px;
+				left: -120px;
+			}
+		}
+	}
+	&__top {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 260px;
+		@include screen-xxl {
+			margin-bottom: 200px;
+		}
+		@include screen-xhl {
+			margin-bottom: 140px;
+		}
+		@include screen-md {
+			margin-bottom: 110px;
+		}
+		@include screen-sm {
+			margin-bottom: 80px;
+			text-align: left;
+			align-items: flex-start;
+		}
+		.section-title {
+			max-width: 1090px;
+			margin-bottom: 60px;
+			@include screen-xxl {
+				margin-bottom: 30px;
+			}
+		}
+		.subtitle {
+			max-width: calc(740 / 1580 * 100%);
+			@include screen-xhl {
+				max-width: calc(450 / 688 * 100%);
+			}
+			@include screen-sm {
+				text-align: left;
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+.how-it-works-body {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 0 130px;
+	position: relative;
+	@include screen-xxl {
+		padding: 0;
+	}
+	@include screen-sm {
+		grid-template-columns: 1fr;
+	}
+	.section-title {
+		@include screen-sm {
+			margin-bottom: 40px;
+		}
+	}
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 105px;
+		position: relative;
+		counter-reset: item;
+		@include screen-xhl {
+			row-gap: 40px;
+		}
+		@include screen-sm {
+			row-gap: 20px;
+		}
+
+		&::before {
+			content: "";
+			width: 4px;
+			height: 80%;
+			position: absolute;
+			top: 10%;
+			left: 0;
+			background-color: #bebebe;
+			display: block;
+			z-index: 1;
+			transform: translateX(-50%);
+			@include screen-xhl {
+				width: 2px;
+			}
+			@include screen-sm {
+				left: 18px;
+			}
+		}
+	}
+
+	&__content-item {
+		padding-left: 140px;
+		position: relative;
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 140%;
+		color: $color-grey;
+		@include screen-xxl {
+			font-size: 20px;
+			line-height: 1.2;
+			padding-left: 130px;
+			font-weight: 400;
+		}
+		@include screen-xhl {
+			font-size: 16px;
+			padding-left: 86px;
+		}
+		@include screen-sm {
+			padding-left: 53px;
+		}
+		&:nth-child(1) {
+			&::before {
+				background-color: #8765ef;
+				box-shadow: 0 0 0 4px inset #8765ef;
+				color: $color-white;
+				@include screen-xhl {
+					box-shadow: 0 0 0 2px inset #8765ef;
+				}
+			}
+			&::after {
+				content: "";
+				width: 4px;
+				height: 120%;
+				background-color: #8765ef;
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				left: 0;
+				transform: translateX(-50%);
+				@include screen-xhl {
+					width: 2px;
+				}
+				@include screen-sm {
+					left: 18px;
+				}
+				@include screen-xs {
+					left: 18px;
+					height: 100%;
+				}
+			}
+		}
+		&::before {
+			counter-increment: item;
+			content: counter(item);
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			left: -30px;
+			box-shadow: 0 0 0 4px inset #bebebe;
+			z-index: 3;
+			background-color: $color-white;
+			color: #bebebe;
+			font-size: 36px;
+			@include screen-xhl {
+				width: 36px;
+				height: 36px;
+				left: -18px;
+				font-size: 20px;
+				box-shadow: 0 0 0 2px inset #bebebe;
+			}
+			@include screen-sm {
+				left: 0;
+			}
+		}
+	}
+}
+
+//</HOW IT WORKS>========================================

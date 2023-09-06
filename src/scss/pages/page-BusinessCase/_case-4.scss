@@ -1,0 +1,92 @@
+.case-4 {
+	position: relative;
+	color: $color-white;
+	&::before {
+		content: "";
+		width: calc(100% - 20px);
+		height: calc(100% - 20px);
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		background-color: $color-blue;
+		z-index: -1;
+		border-radius: 20px;
+	}
+	&__container {
+		display: flex;
+		align-items: center;
+	}
+	&__body {
+		display: grid;
+		grid-template-columns: 1.1fr 1fr;
+		align-items: center;
+		@include adaptiveValue("gap", 90, 40);
+		height: 100%;
+		align-items: center;
+		@include screen-xhl {
+			grid-template-columns: auto;
+		}
+	}
+
+	&__title {
+		@include adaptiveValue("font-size", 130, 37);
+		font-weight: 500;
+		br {
+			@include screen-xhl {
+				display: none;
+			}
+		}
+	}
+
+	&__form {
+		@include adaptiveValue("padding-top", 56, 20);
+		@include adaptiveValue("padding-bottom", 60, 40);
+		@include adaptiveValue("padding-right", 56, 26);
+		@include adaptiveValue("padding-left", 56, 26);
+		background: $color-white;
+		box-shadow: 0px 15px 40px rgba(13, 0, 92, 0.1);
+		border-radius: 20px;
+		form {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+		button {
+			@include adaptiveValue("line-height", 86, 50);
+			@include adaptiveValue("font-size", 33, 16);
+			background: $color-orange;
+			border-radius: 20px;
+			color: $color-white;
+			padding: 0 15px;
+		}
+		input {
+			width: 100%;
+			background: $color-white;
+			border: 1px solid $color-blue;
+			border-radius: 15px;
+			@include adaptiveValue("padding", 23, 12);
+			@include adaptiveValue("font-size", 24, 16);
+			color: $color-main;
+			line-height: 1;
+			@include adaptiveValue("margin-bottom", 18, 10);
+
+			&::placeholder {
+				color: #a1a1a1;
+			}
+		}
+		div.error {
+			input {
+				border-color: $color-red;
+				&::placeholder {
+					color: $color-red;
+				}
+			}
+		}
+	}
+
+	&__form-title {
+		@include adaptiveValue("font-size", 33, 16);
+		line-height: 1.2;
+		@include adaptiveValue("margin-bottom", 40, 10);
+		color: $color-blue;
+	}
+}

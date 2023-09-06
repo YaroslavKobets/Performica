@@ -1,0 +1,43 @@
+.case-13 {
+	&__container {
+		display: flex;
+		gap: 30px 60px;
+		@include screen-xhl {
+			display: grid;
+			grid-template-columns: auto;
+			justify-content: center;
+		}
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: space-between;
+		color: #424242;
+	}
+
+	&__title {
+		@include adaptiveValue("font-size", 70, 28);
+		line-height: 1.2;
+		margin-bottom: 30px;
+	}
+	&__text {
+		@include adaptiveValue("font-size", 36, 18);
+		line-height: 1.4;
+		margin-bottom: 50px;
+		max-width: 915px;
+		@include screen-xhl {
+			margin-bottom: 0;
+		}
+	}
+
+	&__img {
+		align-self: flex-end;
+		width: 100%;
+		@include adaptiveValue("max-width", 670, 290);
+		@include adaptiveValue("margin-right", -100, 0);
+		@include screen-xhl {
+			margin: 0 auto !important;
+		}
+	}
+}

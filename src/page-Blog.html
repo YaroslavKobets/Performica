@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/static/head.html',{
+"title": "Home"
+})
+
+<body>
+	<div class="wrapper">
+		@@include("html/template-parts/header.html",{})
+		<main class="page page-blog ">
+			<section class="blog">
+				<div class="blog__container container">
+					<h1 class="blog-title">Blog</h1>
+
+					<div class="blog__wrapper">
+						<div class="search search-mobile">
+							<svg>
+								<use xlink:href="#performica-svg-search">
+							</svg>
+							<input type="text" placeholder="Search">
+						</div>
+						<div class="blog__posts">
+							<article class="blog__post blog-post">
+								<a href="./page-Post.html" class="blog-post__preview">
+									<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+										data-src="@img/page-blog/post-1.png" decoding="async" alt="" title="">
+								</a>
+								<a href="./page-Post.html" class="blog-post__title">Your Leadership is on Fire </a>
+								<div class="blog-post__info">
+									<div class="blog-post__date">23 September 2022</div>
+									<div class="blog-post__category">
+										<a href="">Hiring & Retention</a>
+										<a href="">Employee development</a>
+									</div>
+								</div>
+								<div class="blog-post__descr">Good leaders are incredibly valuable to businesses, and it’s no secret
+									that
+									companies with good leadership do better than their competitors. Good leaders are able to make great
+									things happen, and they also inspire their team members to do the same. With all of this in mind, how
+									can
+									you become a better leader? </div>
+								<a href="./page-Post.html" class="blog-post__read-btn">Read more</a>
+							</article>
+							<article class="blog__post blog-post">
+								<a href="" class="blog-post__preview">
+									<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+										data-src="@img/page-blog/post-1.png" decoding="async" alt="" title="">
+								</a>
+								<a href="" class="blog-post__title">The Best Ways to Retain Engineers: Tips and Tricks</a>
+								<div class="blog-post__info">
+									<div class="blog-post__date">23 September 2022</div>
+									<div class="blog-post__category">
+										<a href="">Hiring & Retention</a>
+										<a href="">Employee development</a>
+									</div>
+								</div>
+								<div class="blog-post__descr">Good leaders are incredibly valuable to businesses, and it’s no secret
+									that
+									companies with good leadership do better than their competitors. Good leaders are able to make great
+									things happen, and they also inspire their team members to do the same. With all of this in mind, how
+									can
+									you become a better leader?</div>
+								<a href="" class="blog-post__read-btn">Read more</a>
+							</article>
+							<article class="blog__post blog-post">
+								<a href="" class="blog-post__preview">
+									<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+										data-src="@img/page-blog/post-1.png" decoding="async" alt="" title="">
+								</a>
+								<a href="" class="blog-post__title">Don't be afraid of Organizational Network Analysis (ONA) - it could
+									be
+									the key to a happier workplace!</a>
+								<div class="blog-post__info">
+									<div class="blog-post__date">23 September 2022</div>
+									<div class="blog-post__category">
+										<a href="">Hiring & Retention</a>
+										<a href="">Employee development</a>
+									</div>
+								</div>
+								<div class="blog-post__descr">Good leaders are incredibly valuable to businesses, and it’s no secret
+									that
+									companies with good leadership do better than their competitors. Good leaders are able to make great
+									things happen, and they also inspire their team members to do the same. With all of this in mind, how
+									can
+									you become a better leader?</div>
+								<a href="" class="blog-post__read-btn">Read more</a>
+							</article>
+						</div>
+						<div class="blog__sidebar sidebar">
+							<div class="search search-sidebar">
+								<svg>
+									<use xlink:href="#performica-svg-search">
+								</svg>
+								<input type="text" placeholder="Search">
+							</div>
+							<div class="tags">
+								<div class="tags__title">Tags</div>
+								<div class="tags__body">
+									<a href="">Hiring & Retention</a>
+									<a href="">Employee development</a>
+									<a href="">Remote work</a>
+									<a href="">Performance and culture</a>
+									<a href="" class="current">Growth essentials</a>
+									<a href="">Benefits</a>
+									<a href="">People operations</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pagging">
+						<ul class="pagging__list">
+							<li>
+								<a href="" class="pagging__item active">1</a>
+							</li>
+							<li>
+								<a href="" class="pagging__item">2</a>
+							</li>
+							<li>
+								<a href="" class="pagging__item">3</a>
+							</li>
+							<li>
+								<a href="" class="pagging__dots">...</a>
+							</li>
+							<a href="" class="pagging__arrow">Next</a>
+
+						</ul>
+					</div>
+				</div>
+			</section>
+
+
+		</main>
+		@@include('html/template-parts/footer.html',{})
+		@@include('html/template-parts/popup.html',{})
+		@@include('html/template-parts/sprite-icons.html',{})
+	</div>
+
+	@@include('html/static/js.html',{})
+</body>
+
+</html>

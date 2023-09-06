@@ -1,0 +1,142 @@
+body {
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+	}
+}
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	main {
+		flex: 1 1 auto;
+	}
+}
+section {
+	position: relative;
+}
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1600px;
+	padding: 0 10px;
+	@include screen-xxl {
+		max-width: 1080px;
+		padding: 0 20px;
+	}
+	@include screen-xhl {
+		max-width: 768px;
+		padding: 0 40px;
+	}
+	@include screen-md {
+		max-width: 100%;
+		padding: 0 24px;
+	}
+	@include screen-sm {
+		padding: 0 16px;
+	}
+}
+
+.section-title {
+	font-weight: 500;
+	font-size: 70px;
+	line-height: 1;
+	color: $color-main;
+	@include screen-xxl {
+		font-size: 52px;
+	}
+	@include screen-xhl {
+		font-size: 34px;
+		line-height: 1.1;
+	}
+	@include screen-sm {
+		font-size: 30px;
+	}
+	&--red {
+		span {
+			color: $color-red;
+		}
+	}
+	&--blue {
+		span {
+			color: $color-blue;
+		}
+	}
+	&--orange {
+		span {
+			color: $color-orange;
+		}
+	}
+}
+
+.subtitle {
+	font-size: 25px;
+	line-height: 1.4;
+	color: $color-grey;
+	@include screen-xhl {
+		font-size: 16px;
+		line-height: 1.2;
+	}
+}
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 70px;
+	font-size: 33px;
+	line-height: 40px;
+	font-weight: 500;
+	padding: 23.5px 30px 26.5px;
+	color: $color-white;
+	width: 100%;
+	max-width: 380px;
+	transition: all 0.3s ease 0s;
+	@include screen-xxl {
+		font-size: 26px;
+		padding: 15px 20px;
+		max-width: 300px;
+	}
+	@include screen-xhl {
+		font-size: 18px;
+		line-height: 1;
+		padding: 14px 20px 18px;
+		max-width: 216px;
+	}
+	@include screen-sm {
+		font-size: 18px;
+		padding: 17px 20px;
+		max-width: 268px;
+	}
+	@include screen-xs {
+		font-size: 18px;
+		max-width: 242px;
+	}
+	&--orange {
+		background-color: $color-orange;
+		&:hover {
+			background-color: $color-blue;
+		}
+	}
+	&--white {
+		background-color: $color-white;
+		color: $color-blue !important;
+		&:hover {
+			background-color: $color-orange;
+			color: $color-white !important;
+		}
+	}
+}
+
+.anchor {
+	position: absolute;
+	top: -124px;
+	left: 0;
+	@include screen-xxl {
+		top: -97px;
+	}
+	@include screen-xhl {
+		top: -63px;
+	}
+}

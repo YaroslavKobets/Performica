@@ -1,0 +1,191 @@
+//<HEADER>========================================
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	background-color: $color-white;
+	border-bottom: 1px solid rgba(98, 83, 171, 0.2);
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px 0 16px;
+		@include screen-xhl {
+			padding: 8px 0;
+		}
+		@include screen-sm {
+			padding: 24px 0;
+		}
+	}
+
+	&__logo {
+		max-width: 250px;
+		margin-right: 20px;
+		@include screen-xxl {
+			max-width: 175px;
+		}
+		@include screen-xhl {
+			max-width: 102px;
+		}
+		@include screen-sm {
+			max-width: 130px;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+
+	&__menu {
+	}
+}
+
+.menu {
+	&__icon {
+		display: none;
+	}
+	&__body {
+		display: flex;
+		align-items: center;
+		ul {
+			display: flex;
+			align-items: center;
+			row-gap: 15px;
+			li {
+				margin-right: 40px;
+				@include screen-xxl {
+					margin-right: 30px;
+				}
+				@include screen-md {
+					margin-right: 15px;
+				}
+				a {
+					white-space: nowrap;
+					font-weight: 500;
+					font-size: 26px;
+					line-height: 1;
+					color: $color-grey;
+					transition: all 0.3s ease 0s;
+					@include screen-xxl {
+						font-size: 20px;
+						line-height: 26px;
+					}
+					@include screen-xhl {
+						font-size: 14px;
+					}
+					&:hover {
+						color: $color-orange;
+					}
+				}
+			}
+		}
+		.button {
+			padding: 0;
+			line-height: 67px;
+			font-size: 25px;
+			min-width: 251px;
+			padding: 0 15px;
+			@include screen-xxl {
+				line-height: 40px;
+				min-width: auto;
+				font-size: 20px;
+			}
+			@include screen-xhl {
+				font-size: 12px;
+				line-height: 26px;
+				padding: 0 10px;
+				min-width: 120px;
+			}
+		}
+	}
+}
+
+@include screen-sm {
+	.menu {
+		display: block;
+		&__icon {
+			z-index: 55;
+			display: block;
+			position: relative;
+			width: 24px;
+			height: 19px;
+			cursor: pointer;
+			span,
+			&::before,
+			&::after {
+				position: absolute;
+				left: 0px;
+				height: 3px;
+				width: 24px;
+				transition: all 0.3s ease 0s;
+				background-color: $color-blue;
+				border-radius: 3px;
+			}
+			&::before,
+			&::after {
+				content: "";
+			}
+			&::before {
+				top: 0px;
+			}
+			&::after {
+				bottom: 0px;
+			}
+			span {
+				top: 50%;
+				transform: scale(1) translateY(-50%);
+			}
+			&.open {
+				z-index: 7;
+				span {
+					transform: scale(0) translateY(-50%);
+				}
+				&::before {
+					top: 50%;
+					transform: rotate(-45deg) translateY(-50%);
+				}
+				&::after {
+					bottom: 50%;
+					transform: rotate(45deg) translateY(50%);
+				}
+			}
+		}
+		&__body {
+			position: fixed;
+			top: 68px;
+			right: -100%;
+			width: 50%;
+			height: 100vh;
+			transition: right 0.6s ease 0s;
+			overflow: auto;
+			background-color: $color-white;
+			display: flex;
+			flex-direction: column;
+			padding: 15px 16px 30px;
+			@media (max-width: 480px) {
+				width: 100%;
+			}
+			ul {
+				flex-direction: column;
+				li {
+					margin: 0;
+					margin-bottom: 30px;
+				}
+			}
+			.button {
+				line-height: 52px;
+				font-size: 18px;
+				max-width: 242px;
+			}
+			&.open {
+				right: 0;
+			}
+		}
+	}
+}
+
+//<HEADER>========================================

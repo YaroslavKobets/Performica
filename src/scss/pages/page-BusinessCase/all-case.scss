@@ -1,0 +1,60 @@
+.case-container {
+	height: 100vh;
+	max-height: 1080px;
+	max-width: 1920px;
+	margin: 0 auto;
+	position: relative;
+	@include adaptiveValue("padding-left", 100, 15);
+	@include adaptiveValue("padding-right", 100, 15);
+	@include adaptiveValue("padding-top", 100, 30);
+	@include adaptiveValue("padding-bottom", 120, 30);
+	@include screen-xxl {
+		min-height: auto;
+		max-height: unset;
+	}
+	@media (max-height: 1080px) {
+		height: auto;
+		min-height: auto;
+		max-height: unset;
+	}
+}
+.case-logo {
+	position: absolute;
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 4;
+	@include adaptiveValue("width", 74, 50);
+	@include adaptiveValue("height", 50, 26);
+	@include adaptiveValue("top", 50, 0);
+	@include adaptiveValue("right", 45, 0);
+	&--white {
+		background-image: url("../img/page-case/page-logo-white.svg");
+	}
+	&--blue {
+		background-image: url("../img/page-case/page-logo-blue.svg");
+	}
+	@include screen-xhl {
+		display: none;
+	}
+}
+
+@import "./case-1";
+@import "./case-2";
+@import "./case-3";
+@import "./case-4";
+@import "./case-5";
+@import "./case-6";
+@import "./case-7";
+@import "./case-8";
+@import "./case-9";
+@import "./case-10";
+@import "./case-11";
+@import "./case-12";
+@import "./case-13";
+@import "./case-14";
+@import "./case-15";
+@import "./case-16";
+@import "./case-17";
+@import "./case-18";
+@import "./case-19";
+@import "./case-20";

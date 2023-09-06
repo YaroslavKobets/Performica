@@ -1,0 +1,78 @@
+.case-20 {
+	color: $color-grey;
+	&__title {
+		line-height: 1.2;
+		color: $color-main;
+		@include adaptiveValue("font-size", 70, 28);
+		@include adaptiveValue("margin-bottom", 130, 30);
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		@include adaptiveValue("gap", 110, 30);
+		@include screen-xxl {
+			grid-template-columns: 1fr 1fr;
+		}
+		@include screen-md {
+			grid-template-columns: auto;
+		}
+	}
+
+	&__item {
+		line-height: 1.2;
+	}
+
+	&__item-box {
+		background: $color-white;
+		box-shadow: 0px 10px 50px rgba(13, 0, 92, 0.2);
+		border-radius: 20px;
+		line-height: 1.3;
+		@include adaptiveValue("font-size", 36, 18);
+		@include adaptiveValue("padding", 40, 25);
+		@include adaptiveValue("margin-bottom", 60, 20);
+		span {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			background: $color-white;
+			filter: drop-shadow(0px 10px 50px rgba(13, 0, 92, 0.2));
+			margin-bottom: 30px;
+			svg {
+				width: 55px;
+				height: 55px;
+			}
+			@include screen-md {
+				width: 70px;
+				height: 70px;
+				svg {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+	}
+
+	&__item-risk {
+		padding-left: 40px;
+		@include adaptiveValue("font-size", 50, 22);
+		strong {
+			font-weight: 500;
+		}
+		@include screen-xxl {
+			padding: 0;
+		}
+	}
+
+	&__item-descr {
+		padding-left: 40px;
+		margin-top: 20px;
+		@include adaptiveValue("font-size", 30, 18);
+		@include screen-xxl {
+			padding: 0;
+		}
+	}
+}

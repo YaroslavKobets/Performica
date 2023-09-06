@@ -1,0 +1,36 @@
+.case-8 {
+	&__title {
+		@include adaptiveValue("font-size", 100, 44);
+		font-weight: 500;
+		line-height: 1.2;
+		@include adaptiveValue("margin-bottom", 100, 30);
+		span {
+			color: $color-blue;
+		}
+		@include screen-xs {
+			br {
+				display: none;
+			}
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		@include adaptiveValue("gap", 45, 20);
+		@media (max-width: 400px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__item {
+		background: #f3f1ff;
+		border-radius: 70px;
+		text-align: center;
+		@include adaptiveValue("font-size", 50, 18);
+		@include adaptiveValue("line-height", 96, 56);
+		@include adaptiveValue("padding-right", 40, 20);
+		@include adaptiveValue("padding-left", 40, 20);
+	}
+}

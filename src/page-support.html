@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/static/head.html',{
+"title": "Support"
+})
+
+<body>
+	<div class="wrapper">
+		@@include("html/template-parts/header.html",{})
+		<main class="page page-support">
+			<section class="support">
+				<div class="container support__container">
+					<h1 class="support__title">Support</h1>
+					<div class="support__subtitle">If you require assistance, please fill this form:</div>
+					<form action="#" class="support__form support-form contact-form">
+						<div class="support-form__input-wrapper">
+							<label for="">First name</label>
+							<input type="text" name="" id="" class="required">
+						</div>
+						<div class="support-form__input-wrapper">
+							<label for="">Last name</label>
+							<input type="text" name="" id="" class="required">
+						</div>
+						<div class="support-form__input-wrapper">
+							<label for="">Company name</label>
+							<input type="text" name="" id="" class="required">
+						</div>
+						<div class="support-form__input-wrapper">
+							<label for="">Email</label>
+							<input type="email" name="email" class="required">
+						</div>
+						<div class="support-form__input-wrapper">
+							<label for="">Phone number</label>
+							<input type="tel" name="phone" class="required">
+						</div>
+						<div class="support-form__input-wrapper">
+							<label for="">Support ticket title <mark>*</mark></label>
+							<input type="text" name="name" id="" class="required">
+						</div>
+						<div class="support-form__input-wrapper">
+							<label for="">How we can help? <mark>*</mark></label>
+							<span>Let us know what question or issue we can help with</span>
+							<textarea name="" id=""></textarea>
+						</div>
+						<button type="submit" class="button">Submit</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		@@include('html/template-parts/footer.html',{})
+		@@include('html/template-parts/sprite-icons.html',{})
+	</div>
+
+	@@include('html/static/js.html',{})
+</body>
+
+</html>

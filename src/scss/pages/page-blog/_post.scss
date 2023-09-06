@@ -1,0 +1,366 @@
+.page-post {
+	padding-bottom: 105px;
+}
+.post {
+	margin-top: 175px;
+	@include screen-xxl {
+		margin-top: 130px;
+	}
+	@include screen-xhl {
+		margin-top: 90px;
+	}
+	@include screen-xhl {
+		margin-top: 90px;
+	}
+	&__container {
+		position: relative;
+		&::before {
+			content: "";
+			height: 773px;
+			width: 529px;
+			position: absolute;
+			left: calc(-329 / 1580 * 100%);
+			top: 170px;
+			border-radius: 50%;
+			background: linear-gradient(142.76deg, #c2a8ff 14.98%, #ffc5c8 85.22%);
+			opacity: 0.6;
+			filter: blur(200px);
+			z-index: -1;
+			@include screen-xhl {
+				display: none;
+			}
+		}
+		&::after {
+			content: "";
+			height: 942px;
+			width: 619px;
+			position: absolute;
+			right: calc(-450 / 1580 * 100%);
+			top: 930px;
+			border-radius: 50%;
+			background: linear-gradient(142.76deg, #4df4ff 14.98%, #4086ee 85.22%);
+			opacity: 0.3;
+			filter: blur(300px);
+			z-index: -1;
+			@include screen-xhl {
+				display: none;
+			}
+		}
+	}
+	&__top {
+		margin-bottom: 50px;
+		@include screen-xhl {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 70px;
+		margin-bottom: 30px;
+		@include screen-xxl {
+			font-size: 50px;
+			margin-bottom: 20px;
+		}
+		@include screen-md {
+			font-size: 30px;
+		}
+	}
+
+	&__info {
+		display: flex;
+		@include screen-sm {
+			display: grid;
+			gap: 10px;
+		}
+	}
+
+	&__date {
+		font-size: 20px;
+		line-height: 36px;
+		margin-right: 30px;
+		white-space: nowrap;
+		@include screen-xhl {
+			font-size: 16px;
+			line-height: 30px;
+		}
+	}
+
+	&__category {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		a {
+			display: block;
+			color: $color-blue;
+			font-size: 20px;
+			line-height: 1.3;
+			padding: 6px 8px;
+			background: #f0edf7;
+			border-radius: 5px;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				color: $color-white;
+				background: $color-blue;
+			}
+			@include screen-xhl {
+				font-size: 14px;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 2fr 0.75fr;
+		column-gap: 150px;
+		@include screen-xxl {
+			column-gap: 30px;
+		}
+		@include screen-xhl {
+			grid-template-columns: auto;
+			gap: 50px;
+		}
+	}
+
+	&__sidebar {
+	}
+	&__socials {
+		display: flex;
+		align-items: center;
+		li {
+			margin-right: 20px;
+			@include screen-sm {
+				margin-right: 15px;
+			}
+			a {
+				display: block;
+				width: 36px;
+				height: 36px;
+				transition: all 0.3s ease 0s;
+				@include screen-sm {
+					width: 30px;
+					height: 30px;
+				}
+				&:hover {
+					transform: scale(1.1);
+				}
+				svg {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+.post-content {
+	&__image {
+		display: block;
+		border-radius: 15px;
+		overflow: hidden;
+		margin-bottom: 35px;
+		img {
+			object-fit: cover;
+			object-position: center;
+			transition: all 0.6s ease 0s;
+		}
+	}
+
+	&__text {
+		color: #1e1e1e;
+		&:not(:last-child) {
+			margin-bottom: 70px;
+			@include screen-xxl {
+				margin-bottom: 50px;
+			}
+		}
+		a {
+			color: $color-blue;
+			transition: all 0.3s ease 0s;
+			font-weight: 700;
+			text-decoration: underline;
+			&:hover {
+				color: $color-orange;
+			}
+		}
+		h2 {
+			font-weight: 500;
+			font-size: 40px;
+			line-height: 1.2;
+			margin-bottom: 30px;
+			@include screen-xxl {
+				font-size: 32px;
+				margin-bottom: 20px;
+			}
+			@include screen-sm {
+				font-size: 24px;
+			}
+		}
+		p,
+		li {
+			font-size: 25px;
+			line-height: 1.3;
+			@include screen-xxl {
+				font-size: 20px;
+			}
+			@include screen-sm {
+				font-size: 16px;
+			}
+		}
+		li {
+			position: relative;
+			&:not(:last-child) {
+				margin-bottom: 30px;
+				@include screen-sm {
+					margin-bottom: 20px;
+				}
+			}
+		}
+		ul {
+			margin-top: 30px;
+			li {
+				padding-left: 37px;
+				&::before {
+					content: "";
+					width: 7px;
+					height: 7px;
+					position: absolute;
+					top: 15px;
+					left: 0;
+					border-radius: 50%;
+					background-color: $color-blue;
+					@include screen-xxl {
+						top: 10px;
+					}
+					@include screen-sm {
+						top: 8px;
+					}
+				}
+				@include screen-md {
+					padding-left: 25px;
+					&::before {
+						width: 4px;
+						height: 4px;
+					}
+				}
+			}
+		}
+		ol {
+			margin-top: 30px;
+			counter-reset: item;
+			list-style: none;
+			li {
+				padding-left: 45px;
+				@include screen-md {
+					padding-left: 30px;
+				}
+				&::before {
+					counter-increment: item;
+					content: counter(item) ".";
+					position: absolute;
+					top: 0;
+					left: 0;
+					font-weight: 700;
+					font-size: 25px;
+					line-height: 1.3;
+					color: $color-blue;
+					@include screen-xxl {
+						font-size: 20px;
+					}
+					@include screen-sm {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.sidebar {
+	&__post {
+		background: rgba(255, 255, 255, 0.5);
+		overflow: hidden;
+		box-shadow: 0px 15px 40px rgba(13, 0, 92, 0.1);
+		border-radius: 15px;
+		padding: 0 20px 30px;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__post-image {
+		display: block;
+		border-radius: 15px 15px 0 0;
+		overflow: hidden;
+		margin: 0 -20px 20px;
+		img {
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__post-title {
+		font-weight: 500;
+		font-size: 30px;
+		line-height: 1.1;
+		margin-bottom: 15px;
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		line-clamp: 3;
+		box-orient: vertical;
+		@include screen-xxl {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+	}
+	&__post-date {
+		font-size: 16px;
+		line-height: 1.3;
+		margin-bottom: 15px;
+		@include screen-sm {
+			margin-bottom: 30px;
+		}
+	}
+	&__post-descr {
+		font-size: 16px;
+		line-height: 1.3;
+		color: $color-grey;
+		margin-bottom: 20px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		line-clamp: 4;
+		box-orient: vertical;
+	}
+
+	&__post-btn {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		color: $color-blue;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 40px;
+		border: 2px solid $color-blue;
+		border-radius: 22px;
+		padding: 0 23px;
+		transition: all 0.3s ease 0s;
+		@include screen-sm {
+			min-width: 190px;
+		}
+		&:hover {
+			background-color: $color-blue;
+			color: $color-white;
+		}
+	}
+}
